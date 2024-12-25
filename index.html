@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="https://www.timesquareinfotech.com" target="_blank">
+                <!-- <img class="logo" src="hariom_logo-removebg-preview.png" alt="Logo"> -->
+            </a>
+            <h1>Hariom Infotech</h1>
+            <h2></h2>
+        </div>
+
+        <div class="section">
+            <h3>Contact : Yogesh Gala</h3>
+            <div class="icons">
+                <a href="tel:+91 9967129110" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png" alt="Call">
+                    <span>Call</span>
+                </a>
+                <a href="https://wa.me/9967129110" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:hariominfotechweb@gmail.com" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                    <span>Email</span>
+                </a>
+                <a href="https://www.google.com/search?q=hari+om+infotech+borivali+east+reviews" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Review">
+                    <span>Review</span>
+                </a>
+                <a href="https://m.me/Hari Om Infotech" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Messenger">
+                    <span>Messenger</span>
+                </a>
+                <a href="#" class="icon" onclick="showShareModal()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828874.png" alt="Save">
+                    <span>Share Me</span>
+                </a>
+                
+                <!-- Modal for Social Media Links -->
+                <div id="shareModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeShareModal()">&times;</span>
+                        <h3>Share This Page</h3>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_PAGE_URL" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="50">
+                                <p>Facebook</p>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=YOUR_PAGE_URL" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="50">
+                                <p>Twitter</p>
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?url=YOUR_PAGE_URL" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="50">
+                                <p>LinkedIn</p>
+                            </a>
+                            <a href="https://wa.me/?text=Check+this+out:+YOUR_PAGE_URL" target="_blank">
+                                <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="50">
+                                <p>WhatsApp</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <style>
+                    /* Modal Styling */
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        justify-content: center;
+                        align-items: center;
+                    }
+                
+                    .modal-content {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 10px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        position: relative;
+                    }
+                
+                    .modal-content .close {
+                        position: absolute;
+                        top: 10px;
+                        right: 15px;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                
+                    .social-icons {
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 20px;
+                    }
+                
+                    .social-icons a {
+                        text-decoration: none;
+                        text-align: center;
+                        color: #333;
+                    }
+                
+                    .social-icons img {
+                        display: block;
+                        margin: 0 auto 10px;
+                    }
+                </style>
+                
+                <script>
+                    // Show the Share Modal
+                    function showShareModal() {
+                        document.getElementById("shareModal").style.display = "flex";
+                    }
+                
+                    // Close the Share Modal
+                    function closeShareModal() {
+                        document.getElementById("shareModal").style.display = "none";
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Profile :</h3>
+            <div class="icons">
+                <a href="#aboutme" class="icon" onclick="showModal('aboutModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="About Me">
+                    <span>About Me</span>
+                </a>
+                <a href="#skills" class="icon" onclick="showModal('skillsModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Skills">
+                    <span>Skill</span>
+                </a>
+                <a href="#milestone" class="icon" onclick="showModal('milestoneModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1827/1827301.png" alt="Milestone">
+                    <span>Milestone</span>
+                </a>
+               
+                <a href="#experience" class="icon" onclick="showModal('experienceModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Experience">
+                    <span>Experience</span>
+                </a>
+                
+               
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Company :</h3>
+            <div class="icons">
+                <a href="#company" class="icon" onclick="showModal('companyModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Company">
+                    <span>Company</span>
+                </a>
+                <a href="#products" class="icon" onclick="showModal('productsModal')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Products">
+                    <span>Products</span>
+                </a>
+                <a href="https://hariominfotech.co/" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/609/609802.png" alt="Website">
+                    <span>Website</span>
+                </a>
+                <a href="https://www.google.com/maps/dir//Shop+No+11,+Dattadin,+Main,+Kasthurba+Rd,+near+K+Fashion+Store,+Chinchpada,+Borivali+East,+Mumbai,+Maharashtra+400066/@19.2294581,72.7779461,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7b0d1b305c201:0xc1f2f67040069631!2m2!1d72.8603478!2d19.2294765?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+                    <span>Location</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+                <h3>About Me</h3>
+                <p>Hari Om Infotech, established in 2011, aims to be the leading computer dealer in India. We believe in simplicity, making it easy for you to find exactly what you're looking for. Offering a wide range of products, a seamless shopping experience, and exceptional customer service, we ensure total satisfaction. Our comprehensive warranties, customized delivery options, and professional support extend beyond the sale, guaranteeing your peace of mind. Get in touch with us or visit today!.</p>
+            </div>
+        </div>
+
+        <div id="skillsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+                <h3>Skills</h3>
+                <p>You could enhance your professional bio by including expertise in hardware maintenance and repair, software installation and troubleshooting, network setup and configuration, security systems installation such as CCTV and video door phones, custom PC building, IT solutions consulting, and sales or customer support in IT products. These skills align closely with the services provided by Hari Om Infotech.
+                 .</p>
+            </div>
+        </div>
+
+        <div id="milestoneModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('milestoneModal')">&times;</span>
+                <h3>Milestones</h3>
+                <p>Include milestones like managing large-scale security system installations, delivering custom high-performance PCs, leading business network setups, completing IT certifications, and implementing innovative solutions to enhance client efficiency. Highlight partnerships with top providers and contributions to revenue growth or exceptional customer satisfaction..</p>
+            </div>
+        </div>
+
+        <div id="experienceModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('experienceModal')">&times;</span>
+                <h3>Experience</h3>
+                <p>Hari Om Infotech has extensive experience in providing comprehensive IT and security solutions, including hardware repair, software services, networking, and security system installations like CCTV and video door phones. They excel in custom PC building for gaming and corporate needs while offering reliable sales and support for IT products. Their expertise spans both individual and corporate clients, showcasing a commitment to quality and innovation in the technology sector..</p>
+            </div>
+        </div>
+
+        <div id="companyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('companyModal')">&times;</span>
+                <h3>Company Details</h3>
+                <p>Hari Om Infotech, established in 2011, is a leading provider of IT and security solutions. The company is committed to delivering high-quality products and services, including hardware repairs, software installations, network setup, and security system installations like CCTV and video door phones. With a strong emphasis on customer satisfaction, Hari Om Infotech ensures comprehensive support, from product selection to installation and after-sales services. The company caters to both individual customers and businesses, offering tailored IT solutions to meet diverse needs.
+
+                    .</p>
+            </div>
+        </div>
+
+        <div id="productsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('productsModal')">&times;</span>
+                <h3>Products</h3>
+                <div class="product-slider">
+                    <div class="product-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.7oNw0g1xn8GhK5BBo2gFowHaFF&pid=Api" alt="HP Pavilion x360 2-in-1 Laptop" width="100">
+                        <p><strong>HP Pavilion x360 2-in-1 14" Touch-Screen Laptop</strong><br>
+                            A versatile 2-in-1 laptop with touchscreen functionality, ideal for both work and entertainment.</p>
+                    </div>
+            
+                    <!-- Product 2 -->
+                    <div class="product-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.tHvMkM-ma6VPbMEFLNGMfwHaHa&pid=Api" alt="Asus ROG Strix Scar II Gaming Laptop" width="100">
+                        <p><strong>Asus ROG Strix Scar II Gaming Laptop</strong><br>
+                            A powerful gaming laptop designed for the ultimate gaming experience with a high refresh rate display.</p>
+                    </div>
+            
+                    <!-- Product 3 -->
+                    <div class="product-item">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.zm3Qz7wKiqTaZy9qPrhbcAHaG0&pid=Api" alt="Lightweight Laptop" width="100">
+                        <p><strong>Best Lightweight Laptops</strong><br>
+                            A collection of lightweight laptops for those who need portability and performance on the go.</p>
+                    </div>
+            
+                    <!-- Product 4 -->
+                    <div class="product-item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.Ir29KH8ifMH_oEOBLg6uYwHaHa&pid=Api" alt="Monitor" width="100">
+                        <p><strong>Monitors</strong><br>
+                            A variety of monitors suitable for both gaming and professional use, providing sharp and vibrant displays.</p>
+                    </div>
+            
+                    <!-- Product 5 -->
+                    <div class="product-item">
+                        <img src="Black Computer Mouse PNG Images (Transparent HD Photo Clipart).jpeg" alt="Mouse" width="100">
+                        <p><strong>Mouse</strong><br>
+                            Ergonomically designed mice for comfort and precision, perfect for both casual and professional use.</p>
+                    </div>
+            
+                    <!-- Product 6 -->
+                    <div class="product-item">
+                        <img src="HD png image DJ.jpeg" alt="Speaker" width="100">
+                        <p><strong>Speaker</strong><br>
+                            High-quality speakers for an immersive sound experience, ideal for entertainment and work setups.</p>
+                    </div>
+            
+                    <!-- Product 7 -->
+                    <div class="product-item">
+                        <img src="PCパーツセットイラスト.jpeg" alt="Computer Parts" width="100">
+                        <p><strong>Computer Parts</strong><br>
+                            Various computer parts including CPUs, GPUs, RAM, and storage devices to build or upgrade your system.</p>
+                    </div>
+            
+                    <!-- Product 8 -->
+                    <div class="product-item">
+                        <img src="Good news, We do installation of CCTV camera surveillance system in affordable price_ 😀.jpeg" alt="CCTV Camera" width="100">
+                        <p><strong>CCTV Camera</strong><br>
+                            A range of CCTV cameras to enhance your security with high-definition video capture and monitoring.</p>
+                    </div>
+            
+                    <!-- Product 9 -->
+                    <div class="product-item">
+                        <img src="Flat Comic Style Vector Hd PNG Images, Router Vector Icon In Flat Style, Style Icons, Router Icons, In Icons PNG Image For Free Download.jpeg" alt="Networking Equipment" width="100">
+                        <p><strong>Networking Equipment</strong><br>
+                            Routers, switches, and access points to set up a reliable and fast network for home or business.</p>
+                    </div>
+            
+                    <!-- New Product 10 -->
+                    <div class="product-item">
+                        <img src="Fone De Ouvido On-ear Sem Fio Jbl Tune 510bt Preto.jpeg" alt="Headphones" width="100">
+                        <p><strong>Headphones</strong><br>
+                            Noise-canceling headphones for an immersive audio experience, perfect for music and calls.</p>
+                    </div>
+            
+                    <!-- New Product 11 -->
+                    <div class="product-item">
+                        <img src="Download Gallery - Razer Webcam PNG Image with No Backgroud - PNGkey_com.jpeg" alt="Webcam" width="100">
+                        <p><strong>Webcam</strong><br>
+                            High-definition webcams for video conferencing, streaming, and online meetings.</p>
+                    </div>
+            
+                    <!-- New Product 12 -->
+                    <div class="product-item">
+                        <img src="Satechi Aluminum USB Type-C External HDD Hard Drive Disk Enclosure Case - Up to 10 Gbps - Compatible with Most 2_5-inch HDD and SSD (Space Gray).jpeg" alt="External Hard Drive" width="100">
+                        <p><strong>External Hard Drive</strong><br>
+                            Portable external hard drives for storing and backing up your important files on the go.</p>
+                    </div>
+            
+                   
+            
+                    <!-- New Product 13 -->
+                    <div class="product-item">
+                        <img src="C11CJ61401 _ Epson EcoTank Inkjet Printer.jpeg" alt="Printer" width="100">
+                        <p><strong>Printers</strong><br>
+                            Multi-function printers for all your printing, scanning, and copying needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Follow Us :</h3>
+            <div class="icons">
+                <a href="https://www.facebook.com/yjgami?mibextid=ZbWKwL" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+
+                <a href="https://www.instagram.com/hariominfotech_official/" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+
+
+                <a href="https://www.youtube.com/@hariominfotech/featured" target="_blank" class="icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            // Function to show the modal
+            function showModal(modalId) {
+                document.getElementById(modalId).style.display = "flex";
+            }
+
+            // Function to close the modal
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
