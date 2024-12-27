@@ -112,9 +112,9 @@ h3 {
 
 .product-slider {
   display: flex;
-  flex-direction: column; 
-  overflow-y: auto; 
-  max-height: 400px;
+  flex-direction: column;
+  overflow-x: auto; 
+  max-height: 500px;
   gap: 20px; 
   padding: 10px 0; 
 }
@@ -128,6 +128,8 @@ h3 {
 .product-item img {
   border-radius: 8px;
   margin-bottom: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .product-item p {
@@ -149,17 +151,17 @@ h3 {
   overflow: auto;
   background-color: rgba(0,0,0,0.4); /* Background color */
 }
-
+/* 
 .modal-content {
   background-color: white;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
+  width: 50%;
+  max-width: 400px;
   text-align: center;
   border-radius: 10px;
-}
+} */
 
 .close {
   color: #aaa;
@@ -226,42 +228,17 @@ h3 {
 
 
 .for-flex {
+  
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap; /* Allows items to wrap if necessary */
-  gap: 20px; /* Adds space between items */
 }
 
-
+/* 
 .for-flex > div {
-  flex: 1 1 calc(50% - 20px); /* Makes each item occupy 50% of the width */
-  box-sizing: border-box; /* Includes padding and border in width calculations */
-}
-
-@media (max-width: 400px) {
-  .for-flex > div {
-    flex: 1 1 100%; /* Makes each item take full width below 400px */
-    text-align: center; /* Centers the text for better appearance */
-
-  }
-}
-
-@media (max-width: 466px){
-  .for-flex{
-    
-   
-    display: flex;
-    flex-direction: column;
-    
-    
-    }
-    .product-item img{
-      width: 50px;
-      height: 50px;
-
-    }
-  }
+  flex: 1 1 calc(50% - 20px); 
+  box-sizing: border-box;
+} */
 
   .modal {
     display: none;
@@ -275,15 +252,15 @@ h3 {
     align-items: center;
 }
 
-.modal-content {
-    background: #fff;
+/* .modal-content {
+    background: #120f0f;
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
     text-align: center;
     position: relative;
-}
+} */
 
 .modal-content h3 {
     margin-bottom: 15px;
@@ -305,9 +282,9 @@ h3 {
 }
 
 .service img {
-    width: 100%;
-    max-width: 100px;
-    margin-bottom: 10px;
+    
+  height: 50px;
+  width: 50px;
 }
 
 .service h3 {
@@ -317,4 +294,14 @@ h3 {
 
 .service p {
     text-align: justify;
+}
+.modal-content1 {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 70%;
+  text-align: center;
+  height: 90%;
+  position: relative;
 }
