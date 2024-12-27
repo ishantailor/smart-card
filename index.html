@@ -28,6 +28,7 @@
             width: 90%;
             text-align: center;
             position: relative;
+            overflow-y: auto;
         }
 
         .modal-content h3 {
@@ -127,13 +128,15 @@
                 
                     .modal-content {
                         background: #fff;
-                        padding: 20px;
+                        /* padding: 20px; */
                         border-radius: 10px;
-                        max-width: 500px;
-                        width: 90%;
+                        max-width: 400px;
+                        width: 70%;
                         text-align: center;
-                        position: relative;
+                        height: 90%;
+                        /* position: relative; */
                     }
+                    
                 
                     .modal-content .close {
                         position: absolute;
@@ -290,12 +293,12 @@
         </div>
 
         <div id="productsModal" class="modal">
-            <div class="modal-content">
+            <div class="modal-content1">
                 <span class="close" onclick="closeModal('productsModal')">&times;</span>
                 <h3>Products</h3>
                 <div class="product-slider">
                    <!-- Product 1 -->
-                <div class="for-flex">
+                <div class="for-flex   ">
 <div class="product-item">
     <img src="https://i.pinimg.com/736x/3e/5f/a1/3e5fa1a77dd98dfbcd97f077781889de.jpg" alt="Computer" width="100">
     <p><strong>Computer</strong><br>
