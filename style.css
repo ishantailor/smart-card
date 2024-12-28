@@ -305,3 +305,14 @@ h3 {
   height: 90%;
   position: relative;
 }
+
+.modal-content123{
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 70%;
+  text-align: center;
+  height: 20%;
+  position: relative;
+}
